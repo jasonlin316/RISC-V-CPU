@@ -23,15 +23,15 @@ module VALU (v1_i, v2_i, VALUCtrl_i, v_o,over);
     
 
     parameter VSUM  = 3'b010; //vector addition
-    parameter VSUB  = 3'b110; //vector subtraction,disabled
-    parameter VSM   = 3'b000; //scalar multiplication
+    parameter VSUB  = 3'b110; //vector subtraction
     parameter VDP   = 3'b001; //dot product
+    //parameter VSM   = 3'b000; //scalar multiplication
     //parameter VADDI = 3'b011; //vector addi
     //parameter VXP  = 3'b100; //cross product
     
     always @(*) begin
+        
         //VZero_o = (v1_i - v2_i) ? 0 : 1;
-        //v1 = v1_i[15:0]
         over[0] = 0;
         over[1] = 0;
         over[2] = 0;
@@ -46,7 +46,7 @@ module VALU (v1_i, v2_i, VALUCtrl_i, v_o,over);
         b8 = v2_i[31:24];
         case (VALUCtrl_i)
             VSUM: begin
-              
+                
                 e1 = b1 + b2;
                 e2 = b3 + b4;
                 e3 = b5 + b6;
@@ -61,7 +61,9 @@ module VALU (v1_i, v2_i, VALUCtrl_i, v_o,over);
                 else over[2] = 0;
                 if( ~v1_i[31] & ~v2_i[31] )over[3] = 1;
                 else over[3] = 0;
+                
             end
+            
             VSUB: begin
 
                 e1 = b1 - b2;
@@ -83,6 +85,7 @@ module VALU (v1_i, v2_i, VALUCtrl_i, v_o,over);
             end
 
             VDP: begin
+                
                 s1  = a1 * a2 ;
                 s2  = a3 * a4 ;
                 s3  = a5 * a6 ;
@@ -93,12 +96,17 @@ module VALU (v1_i, v2_i, VALUCtrl_i, v_o,over);
             end
 
             default: begin
+                
                 over[0] = 0;
                 over[1] = 0;
                 over[2] = 0;
                 over[3] = 0;
                 v_o = v1_i;
+                
             end
+            
         endcase
+        
     end
+    
 endmodule
