@@ -176,7 +176,7 @@ always@(posedge clk_i or posedge reset )begin
             if(instr_i == 8'b1111_1110)flag <= 1;//start reading in instr
             else flag <= flag;
             start_i <= start_i;
-            inst_delay <= instr_wr_address;
+            
         end
     end
 end

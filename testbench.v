@@ -1,7 +1,15 @@
-`define CYCLE_TIME 10            
+           
 `timescale 1ns/10ps
+`define CYCLE_TIME 10          	  // Modify your clock period here
+`define SDFFILE    "WIN.sdf"	  // Modify your sdf file name
+`define End_CYCLE  300             // Modify cycle times once your design need more cycle times!
 
-module TestBench;
+
+module testfixture;
+
+`ifdef SDF
+	initial $sdf_annotate(`SDFFILE, CPU);
+`endif
 
 reg                Clk;
 reg                Start;

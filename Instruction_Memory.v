@@ -16,7 +16,7 @@ output  [31:0]      instr_o;
 
 // Instruction memory
 reg     [31:0]     memory  [0:63];
-reg     [1:0]      quad;
+reg     [1:0]      quad,quad_d1;
 reg     [7:0]      instr_read;
 reg     [5:0]      address_read;
 reg                flag,flag_next;
@@ -27,12 +27,12 @@ assign  instr_o = memory[addr_i>>2];
 
 always@(*)begin
     if(instr_i == 8'b1111_1110)flag_next = 1;
-    else if (instr_read == 8'b1111_1111)flag_next = 0;
+    else if (instr_i == 8'b1111_1111)flag_next = 0;
     else flag_next = flag;
 
     if(flag_next)counter_next = counter + 2'd1;
     else counter_next = counter;
-    
+
     if(counter == 2'b11)instr_wr_address_next = instr_wr_address + 6'd1;
     else instr_wr_address_next = instr_wr_address;
 end
@@ -53,6 +53,7 @@ always@(posedge clk or posedge reset)begin
         flag             <= flag_next;
         counter          <= counter_next;
         quad             <= (2'b11-counter);
+        quad_d1          <= quad;
         instr_wr_address <= instr_wr_address_next;
         address_read     <= instr_wr_address;
         instr_read       <= instr_i;
