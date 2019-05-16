@@ -127,8 +127,6 @@ wire [3:0] is_positive_line;
 
 reg               flag;
 reg               start_i;
-reg [1:0] counter,counter_next;
-reg [5:0] instr_wr_address,instr_wr_address_next,inst_delay;
 reg [3:0] vector_signed [0:2];
 reg easter_flag,easter_flag_next;
 reg [7:0] egg1,egg2,egg3;
@@ -152,9 +150,6 @@ always@(posedge clk_i or posedge reset )begin
     if(reset)begin
         flag    <= 0;
         start_i <= 0;
-        counter <= 2'd2;
-        instr_wr_address <= 0;
-        inst_delay <= 0;
         vector_signed[0] <= 0;
         vector_signed[1] <= 0;
         egg1             <= 8'b0000_1101;//013
@@ -171,23 +166,16 @@ always@(posedge clk_i or posedge reset )begin
             if(instr_i == 8'b1111_1111)begin
                 flag    <= 0;
                 start_i <= 1;
-                counter <= counter_next;
-                instr_wr_address <= instr_wr_address_next;
-                inst_delay <= instr_wr_address;
             end
             else begin
                 flag    <= flag;
                 start_i <= start_i;
-                counter <= counter_next;
-                instr_wr_address <= instr_wr_address_next;
-                inst_delay <= instr_wr_address;
             end
         end
         else begin
             if(instr_i == 8'b1111_1110)flag <= 1;//start reading in instr
             else flag <= flag;
             start_i <= start_i;
-            counter <= counter_next + 2'd1;
             inst_delay <= instr_wr_address;
         end
     end
@@ -226,12 +214,6 @@ always@(*)begin
 end
 
 always@(*)begin
-    counter_next = counter + 2'd1;
-    if(counter == 2'b11)instr_wr_address_next = instr_wr_address + 6'd1;
-    else instr_wr_address_next = instr_wr_address;
-end
-
-always@(*)begin
     case(vout_addr)
         2'b00:value_o = op_selection[7:0];
         2'b01:value_o = op_selection[15:8];
@@ -267,9 +249,7 @@ Instruction_Memory Instruction_Memory(
     .clk        (clk_i),
     .reset      (rst),
     .addr_i     (inst_addr), 
-    .instr_wr_address(instr_wr_address),
     .instr_i    (instr_i),
-    .counter    (counter),
     .instr_o    (inst)          //to IF_ID.inst_i
 );
 

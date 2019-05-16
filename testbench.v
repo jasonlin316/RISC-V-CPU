@@ -43,6 +43,7 @@ initial begin
     address = 5'd8;
     vout_addr = 2'b11;
     err = 0;
+    instr_i = 0;
     // Load instructions into instruction memory
     $readmemb("instruction2.txt", instr_store);
     $readmemh("golden.dat",golden);
