@@ -88,7 +88,7 @@ always@(*)begin
   default : begin
   ALUOp_o = 2'b11;
   ALUSrc_o = 1'b1;
-  RegWrite_o = 1'b1;
+  RegWrite_o = 1'b0;
   MemRd_o = 1'b0;
   MemWr_o = 1'b0;
   MemToReg_o = 1'b0;

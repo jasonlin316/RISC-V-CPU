@@ -24,7 +24,7 @@ wire          is_positive;
 wire [2:0]        easter_egg;
 integer            i, outfile, counter;
 integer            stall, flush,idx;
-integer j;
+integer j,k;
 integer err;
 reg  [7:0] golden [0:63];
 
@@ -52,6 +52,7 @@ initial begin
     vout_addr = 2'b11;
     err = 0;
     instr_i = 0;
+    for(k=0;k < (64*4+1) ;k=k+1) instr_store[k] = 0;
     // Load instructions into instruction memory
     $readmemb("instruction2.txt", instr_store);
     $readmemh("golden.dat",golden);
@@ -80,8 +81,10 @@ end
 
 always@(posedge Clk) begin
     if(counter<256)begin
+        #(`CYCLE_TIME/4)
         instr_i = instr_store[counter];
     end
+    else instr_i = 0;
 end
 //8'b1111_1110 = start
 //8'b1111_1111 = end
@@ -95,10 +98,10 @@ initial begin
             vout_addr = vout_addr - 2'b1;
             if(value_o !== golden[j])begin
                  err = err + 1;
-                 $display("pattern%d is wrong:output %d != expected %h",j,value_o,golden[j]);
+                 $display("pattern%d is wrong:output %h != expected %h",j,value_o,golden[j]);
             end
             else begin
-                 $display("pattern%d is correct:output %d == expected %h",j,value_o,golden[j]);
+                 $display("pattern%d is correct:output %h == expected %h",j,value_o,golden[j]);
             end
         end
         #(`CYCLE_TIME*2); 

@@ -30,7 +30,7 @@ always@(*)begin
     else if (instr_i == 8'b1111_1111)flag_next = 0;
     else flag_next = flag;
 
-    if(flag_next)counter_next = counter + 2'd1;
+    if(flag)counter_next = counter + 2'd1;
     else counter_next = counter;
 
     if(counter == 2'b11)instr_wr_address_next = instr_wr_address + 6'd1;
