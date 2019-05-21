@@ -38369,7 +38369,7 @@ module CHIP (clk_i, DataOrReg, address, instr_i, reset, vout_addr, value_o, is_p
   XMD ipad_DataOrReg(.O(i_DataOrReg), .I(DataOrReg), .PU(n_logic0), .PD(n_logic0), .SMT(n_logic0));
   XMD ipad_reset(.O(i_reset), .I(reset), .PU(n_logic0), .PD(n_logic0), .SMT(n_logic0));
   XMD ipad_vout_addr_0(.O(i_vout_addr[0]), .I(vout_addr[0]), .PU(n_logic0), .PD(n_logic0), .SMT(n_logic0));
-  XMD ipad_vout_addr_1(.O(i_vout_addr[1]), .I(vout_addr[0]), .PU(n_logic0), .PD(n_logic0), .SMT(n_logic0));
+  XMD ipad_vout_addr_1(.O(i_vout_addr[1]), .I(vout_addr[1]), .PU(n_logic0), .PD(n_logic0), .SMT(n_logic0));
   XMD ipad_address_0(.O(i_address[0]), .I(address[0]), .PU(n_logic0), .PD(n_logic0), .SMT(n_logic0));
   XMD ipad_address_1(.O(i_address[1]), .I(address[1]), .PU(n_logic0), .PD(n_logic0), .SMT(n_logic0));
   XMD ipad_address_2(.O(i_address[2]), .I(address[2]), .PU(n_logic0), .PD(n_logic0), .SMT(n_logic0));
