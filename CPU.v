@@ -140,7 +140,7 @@ assign ALUfunct_in = {ID_EX_inst_o[31:25],ID_EX_inst_o[14:12]};
 assign pcIm = {inst[31],inst[7],inst[30:25],inst[11:8]};
 assign swIm = {inst[31:25],inst[11:7]};
 assign rst = reset;
-//assign op_selection = (DataOrReg)? reg_o : data_mem_o;
+//assign op_selection = (DataOrReg)? reg_o : data_mem_o;//May28 removed.
 assign toDataMemory = (EX_MEM_instr_o[6:0] == 7'b1010111)? 1 : 0; //NEW
 assign is_positive = is_positive_line[vout_addr];
 
