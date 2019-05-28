@@ -140,7 +140,7 @@ assign ALUfunct_in = {ID_EX_inst_o[31:25],ID_EX_inst_o[14:12]};
 assign pcIm = {inst[31],inst[7],inst[30:25],inst[11:8]};
 assign swIm = {inst[31:25],inst[11:7]};
 assign rst = reset;
-assign op_selection = (DataOrReg)? reg_o : data_mem_o;
+//assign op_selection = (DataOrReg)? reg_o : data_mem_o;
 assign toDataMemory = (EX_MEM_instr_o[6:0] == 7'b1010111)? 1 : 0; //NEW
 assign is_positive = is_positive_line[vout_addr];
 
@@ -215,11 +215,11 @@ end
 
 always@(*)begin
     case(vout_addr)
-        2'b00:value_o = op_selection[7:0];
-        2'b01:value_o = op_selection[15:8];
-        2'b10:value_o = op_selection[23:16];
-        2'b11:value_o = op_selection[31:24];
-        default:value_o = op_selection[7:0];
+        2'b00:value_o   = (DataOrReg)? reg_o[7:0]   : data_mem_o[7:0];
+        2'b01:value_o   = (DataOrReg)? reg_o[15:8]  : data_mem_o[15:8];
+        2'b10:value_o   = (DataOrReg)? reg_o[23:16] : data_mem_o[23:16];
+        2'b11:value_o   = (DataOrReg)? reg_o[31:24] : data_mem_o[31:24];
+        default:value_o = (DataOrReg)? reg_o[7:0]   : data_mem_o[7:0];
     endcase
 end
 

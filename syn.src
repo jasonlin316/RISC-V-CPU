@@ -36,6 +36,8 @@ check_design
 # Map and Optimize the Design
 compile -map_effort medium
 
+compile_ultra
+
 # Analyze and debug the design
 report_area > area_CPU.out
 report_power > power_CPU.out
