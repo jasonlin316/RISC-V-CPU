@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////
 // Created by: Synopsys DC Expert(TM) in wire load mode
 // Version   : N-2017.09-SP2
-// Date      : Fri May 17 16:54:17 2019
+// Date      : Tue May 28 23:31:46 2019
 /////////////////////////////////////////////////////////////
 
 
@@ -37349,16 +37349,16 @@ module VALU ( v1_i, v2_i, VALUCtrl_i, v_o, over );
   AN3B2S U124 ( .I1(VALUCtrl_i[1]), .B1(VALUCtrl_i[0]), .B2(VALUCtrl_i[2]), 
         .O(n52) );
   AN3 U125 ( .I1(VALUCtrl_i[2]), .I2(VALUCtrl_i[1]), .I3(n145), .O(n51) );
-  VALU_DW01_sub_0 sub_70 ( .A({n33, v1_i[30:26], n19, v1_i[24]}), .B({n41, 
+  VALU_DW01_sub_0 sub_72 ( .A({n33, v1_i[30:26], n19, v1_i[24]}), .B({n41, 
         v2_i[30:28], n8, v2_i[26], n17, n4}), .CI(net64163), .DIFF({N91, N90, 
         N89, N88, N87, N86, N85, N84}) );
-  VALU_DW01_sub_1 sub_69 ( .A({n29, v1_i[22:18], n6, n21}), .B({n39, 
+  VALU_DW01_sub_1 sub_71 ( .A({n29, v1_i[22:18], n6, n21}), .B({n39, 
         v2_i[22:16]}), .CI(net64163), .DIFF({N83, N82, N81, N80, N79, N78, N77, 
         N76}) );
-  VALU_DW01_sub_2 sub_68 ( .A({n37, n2, v1_i[13:9], n25}), .B({n122, 
+  VALU_DW01_sub_2 sub_70 ( .A({n37, n2, v1_i[13:9], n25}), .B({n122, 
         v2_i[14:11], n1, v2_i[9:8]}), .CI(net64163), .DIFF({N75, N74, N73, N72, 
         N71, N70, N69, N68}) );
-  VALU_DW01_sub_3 sub_67 ( .A({v1_i[7:1], n20}), .B({n44, v2_i[6:4], n10, 
+  VALU_DW01_sub_3 sub_69 ( .A({v1_i[7:1], n20}), .B({n44, v2_i[6:4], n10, 
         v2_i[2], n15, n28}), .CI(net64163), .DIFF({N67, N66, N65, N64, N63, 
         N62, N61, N60}) );
   VALU_DW01_add_0 add_53 ( .A({n34, v1_i[30:26], n19, v1_i[24]}), .B({n41, 
@@ -37372,24 +37372,24 @@ module VALU ( v1_i, v2_i, VALUCtrl_i, v_o, over );
   VALU_DW01_add_3 add_50 ( .A({v1_i[7:1], n20}), .B({n44, v2_i[6:4], n10, 
         v2_i[2], n15, n28}), .CI(net64163), .SUM({N31, N30, N29, N28, N27, N26, 
         N25, N24}) );
-  VALU_DW01_add_6 add_2_root_add_91_3 ( .A({N111, N111, N110, N109, N108, N107, 
+  VALU_DW01_add_6 add_2_root_add_94_3 ( .A({N111, N111, N110, N109, N108, N107, 
         N106, N105, N104, N103, N102, N101, N100, N99, N98, N97, N96}), .B({
         N127, N127, N126, N125, N124, N123, N122, N121, N120, N119, N118, N117, 
         N116, N115, N114, N113, N112}), .CI(net64163), .SUM({N176, N175, N174, 
         N173, N172, N171, N170, N169, N168, N167, N166, N165, N164, N163, N162, 
         N161, N160}) );
-  VALU_DW01_add_5 add_1_root_add_91_3 ( .A({N143, N143, N143, N142, N141, N140, 
+  VALU_DW01_add_5 add_1_root_add_94_3 ( .A({N143, N143, N143, N142, N141, N140, 
         N139, N138, N137, N136, N135, N134, N133, N132, N131, N130, N129, N128}), .B({N159, N159, N159, N158, N157, N156, N155, N154, N153, N152, N151, N150, 
         N149, N148, N147, N146, N145, N144}), .CI(net64163), .SUM({N194, N193, 
         N192, N191, N190, N189, N188, N187, N186, N185, N184, N183, N182, N181, 
         N180, N179, N178, N177}) );
-  VALU_DW01_add_4 add_0_root_add_91_3 ( .A({N176, N176, N176, N175, N174, N173, 
+  VALU_DW01_add_4 add_0_root_add_94_3 ( .A({N176, N176, N176, N175, N174, N173, 
         N172, N171, N170, N169, N168, N167, N166, N165, N164, N163, N162, N161, 
         N160}), .B({N194, N194, N193, N192, N191, N190, N189, N188, N187, N186, 
         N185, N184, N183, N182, N181, N180, N179, N178, N177}), .CI(net64163), 
         .SUM({N213, N212, N211, N210, N209, N208, N207, N206, N205, N204, N203, 
         N202, N201, N200, N199, N198, N197, N196, N195}) );
-  VALU_DW_mult_uns_1 mult_89 ( .a({n33, n33, n33, n33, n33, n33, n33, n33, n33, 
+  VALU_DW_mult_uns_1 mult_92 ( .a({n33, n33, n33, n33, n33, n33, n33, n33, n33, 
         v1_i[30:26], n18, v1_i[24]}), .b({n41, n41, n41, n41, n41, n41, n41, 
         n41, n124, v2_i[30:28], n8, v2_i[26], n16, n4}), .product({
         SYNOPSYS_UNCONNECTED__0, SYNOPSYS_UNCONNECTED__1, 
@@ -37402,7 +37402,7 @@ module VALU ( v1_i, v2_i, VALUCtrl_i, v_o, over );
         SYNOPSYS_UNCONNECTED__14, SYNOPSYS_UNCONNECTED__15, N159, N158, N157, 
         N156, N155, N154, N153, N152, N151, N150, N149, N148, N147, N146, N145, 
         N144}) );
-  VALU_DW_mult_uns_0 mult_88 ( .a({v1_i[23], v1_i[23], v1_i[23], v1_i[23], 
+  VALU_DW_mult_uns_0 mult_91 ( .a({v1_i[23], v1_i[23], v1_i[23], v1_i[23], 
         v1_i[23], v1_i[23], v1_i[23], v1_i[23], n29, v1_i[22:18], n6, n5}), 
         .b({v2_i[23], v2_i[23], v2_i[23], v2_i[23], v2_i[23], v2_i[23], 
         v2_i[23], v2_i[23], n39, v2_i[22:16]}), .product({
@@ -37416,7 +37416,7 @@ module VALU ( v1_i, v2_i, VALUCtrl_i, v_o, over );
         SYNOPSYS_UNCONNECTED__30, SYNOPSYS_UNCONNECTED__31, N143, N142, N141, 
         N140, N139, N138, N137, N136, N135, N134, N133, N132, N131, N130, N129, 
         N128}) );
-  VALU_DW_mult_uns_3 mult_87 ( .a({n37, n37, n37, n37, n37, n37, n37, n36, n37, 
+  VALU_DW_mult_uns_3 mult_90 ( .a({n37, n37, n37, n37, n37, n37, n37, n36, n37, 
         n2, v1_i[13:9], n23}), .b({n122, n122, n122, n122, n122, n122, n122, 
         n121, n122, v2_i[14:11], n1, v2_i[9:8]}), .product({
         SYNOPSYS_UNCONNECTED__32, SYNOPSYS_UNCONNECTED__33, 
@@ -37429,7 +37429,7 @@ module VALU ( v1_i, v2_i, VALUCtrl_i, v_o, over );
         SYNOPSYS_UNCONNECTED__46, SYNOPSYS_UNCONNECTED__47, N127, N126, N125, 
         N124, N123, N122, N121, N120, N119, N118, N117, N116, N115, N114, N113, 
         N112}) );
-  VALU_DW_mult_uns_2 mult_86 ( .a({v1_i[7], n31, v1_i[7], v1_i[7], v1_i[7], 
+  VALU_DW_mult_uns_2 mult_89 ( .a({v1_i[7], n31, v1_i[7], v1_i[7], v1_i[7], 
         v1_i[7], v1_i[7], v1_i[7], n31, v1_i[6:0]}), .b({n44, n44, n44, n44, 
         n44, n44, n44, n44, n43, v2_i[6:4], n10, v2_i[2], n15, n27}), 
         .product({SYNOPSYS_UNCONNECTED__48, SYNOPSYS_UNCONNECTED__49, 
@@ -37627,8 +37627,8 @@ module CPU ( clk_i, DataOrReg, address, instr_i, reset, vout_addr, value_o,
          inst_4, inst_3, inst_2, inst_1, inst_0, flag, start_i,
          \vector_signed[0][3] , \vector_signed[0][2] , \vector_signed[0][1] ,
          \vector_signed[0][0] , \vector_signed[1][3] , \vector_signed[1][2] ,
-         \vector_signed[1][1] , \vector_signed[1][0] , easter_flag, N34, N38,
-         N39, N40, N41, N44, HazradDetect_Hazard_o, Control_ALUSrc_o,
+         \vector_signed[1][1] , \vector_signed[1][0] , easter_flag, N33, N37,
+         N38, N39, N40, N43, HazradDetect_Hazard_o, Control_ALUSrc_o,
          Control_RegWrite_o, Control_MemRd_o, Control_MemWr_o,
          Control_MemToReg_o, Control_immSelect_o, MEM_WB_RegWrite_o,
          MUX_Control_ALUSrc_o, MUX_Control_RegWrite_o, MUX_Control_MemToReg_o,
@@ -37667,12 +37667,12 @@ module CPU ( clk_i, DataOrReg, address, instr_i, reset, vout_addr, value_o,
   wire   [9:0] ALUfunct_in;
   wire   [24:12] inst;
   wire   [11:0] pcIm;
-  wire   [31:0] reg_o;
-  wire   [31:0] data_mem_o;
   wire   [31:0] EX_MEM_instr_o;
   wire   [3:0] is_positive_line;
   wire   [3:0] vector_signed_bits;
   wire   [2:0] easter_counter;
+  wire   [31:0] reg_o;
+  wire   [31:0] data_mem_o;
   wire   [31:0] addPC;
   wire   [31:0] AddSum_data_o;
   wire   [31:0] pcSelect_data_o;
@@ -37989,9 +37989,9 @@ module CPU ( clk_i, DataOrReg, address, instr_i, reset, vout_addr, value_o,
         .RB(n299), .Q(\vector_signed[0][2] ) );
   QDFFRBN \vector_signed_reg[0][3]  ( .D(vector_signed_bits[3]), .CK(clk_i), 
         .RB(n203), .Q(\vector_signed[0][3] ) );
-  DFCLRBN \easter_egg_reg[2]  ( .RB(\*Logic1* ), .D(N41), .LD(n204), .CK(clk_i), .QB(n156) );
-  DFCLRBN \easter_egg_reg[1]  ( .RB(\*Logic1* ), .D(N40), .LD(n204), .CK(clk_i), .QB(n155) );
-  DFCLRBN \easter_egg_reg[0]  ( .RB(\*Logic1* ), .D(N39), .LD(n203), .CK(clk_i), .QB(n154) );
+  DFCLRBN \easter_egg_reg[2]  ( .RB(\*Logic1* ), .D(N40), .LD(n204), .CK(clk_i), .QB(n156) );
+  DFCLRBN \easter_egg_reg[1]  ( .RB(\*Logic1* ), .D(N39), .LD(n204), .CK(clk_i), .QB(n155) );
+  DFCLRBN \easter_egg_reg[0]  ( .RB(\*Logic1* ), .D(N38), .LD(n203), .CK(clk_i), .QB(n154) );
   TIE1 U175 ( .O(\*Logic1* ) );
   BUF1 U176 ( .I(MUX_ALUSrc_data_o[19]), .O(n179) );
   BUF1CK U177 ( .I(memToReg_data_o[19]), .O(n142) );
@@ -38213,7 +38213,7 @@ module CPU ( clk_i, DataOrReg, address, instr_i, reset, vout_addr, value_o,
   XOR2HS U363 ( .I1(Registers_RTdata_o[0]), .I2(Registers_RSdata_o[0]), .O(n99) );
   INV1S U364 ( .I(n78), .O(n294) );
   OR2 U365 ( .I1(n65), .I2(n277), .O(n136) );
-  INV1S U366 ( .I(N44), .O(n292) );
+  INV1S U366 ( .I(N43), .O(n292) );
   XOR2HS U367 ( .I1(n301), .I2(n64), .O(n134) );
   AOI22S U368 ( .A1(reg_o[16]), .A2(n246), .B1(reg_o[24]), .B2(n15), .O(n61)
          );
@@ -38298,10 +38298,10 @@ module CPU ( clk_i, DataOrReg, address, instr_i, reset, vout_addr, value_o,
   INV1S U418 ( .I(instr_i[6]), .O(n295) );
   ND3 U419 ( .I1(instr_i[7]), .I2(instr_i[5]), .I3(n81), .O(n78) );
   AN2 U420 ( .I1(instr_i[3]), .I2(instr_i[1]), .O(n81) );
-  AN2 U421 ( .I1(N34), .I2(easter_flag), .O(N40) );
+  AN2 U421 ( .I1(N33), .I2(easter_flag), .O(N39) );
   INV1S U422 ( .I(N18), .O(n289) );
   INV1S U423 ( .I(easter_counter[1]), .O(N18) );
-  INV1S U424 ( .I(easter_counter[0]), .O(N44) );
+  INV1S U424 ( .I(easter_counter[0]), .O(N43) );
   XOR2HS U425 ( .I1(n164), .I2(n63), .O(n133) );
   NR2 U426 ( .I1(n301), .I2(n64), .O(n63) );
   INV1S U427 ( .I(flag), .O(n300) );
@@ -38312,8 +38312,8 @@ module CPU ( clk_i, DataOrReg, address, instr_i, reset, vout_addr, value_o,
   INV1S U431 ( .I(instr_i[2]), .O(n297) );
   INV1S U432 ( .I(instr_i[4]), .O(n296) );
   INV1S U433 ( .I(instr_i[0]), .O(n298) );
-  AN2 U434 ( .I1(N38), .I2(easter_flag), .O(N41) );
-  AN2 U435 ( .I1(n153), .I2(easter_flag), .O(N39) );
+  AN2 U434 ( .I1(N37), .I2(easter_flag), .O(N40) );
+  AN2 U435 ( .I1(n153), .I2(easter_flag), .O(N38) );
   XOR2HS U436 ( .I1(easter_flag), .I2(easter_counter[0]), .O(n135) );
   INV1S U437 ( .I(easter_counter[1]), .O(n301) );
   BUF1CK U438 ( .I(IF_ID_inst_o[23]), .O(n281) );
@@ -38333,14 +38333,14 @@ module CPU ( clk_i, DataOrReg, address, instr_i, reset, vout_addr, value_o,
         .B2(N9), .O(n285) );
   AO22 U452 ( .A1(is_positive_line[2]), .A2(n286), .B1(is_positive_line[3]), 
         .B2(N9), .O(n284) );
-  ND2 U453 ( .I1(N44), .I2(easter_counter[1]), .O(n287) );
-  OAI22S U454 ( .A1(n289), .A2(N44), .B1(N18), .B2(easter_counter[0]), .O(n288) );
-  MOAI1S U455 ( .A1(N18), .A2(n164), .B1(n288), .B2(n164), .O(N34) );
-  OA22 U456 ( .A1(N18), .A2(N44), .B1(n292), .B2(easter_counter[1]), .O(n291)
+  ND2 U453 ( .I1(N43), .I2(easter_counter[1]), .O(n287) );
+  OAI22S U454 ( .A1(n289), .A2(N43), .B1(N18), .B2(easter_counter[0]), .O(n288) );
+  MOAI1S U455 ( .A1(N18), .A2(n164), .B1(n288), .B2(n164), .O(N33) );
+  OA22 U456 ( .A1(N18), .A2(N43), .B1(n292), .B2(easter_counter[1]), .O(n291)
          );
   OAI22S U457 ( .A1(easter_counter[1]), .A2(n292), .B1(N18), .B2(n292), .O(
         n290) );
   MOAI1S U458 ( .A1(n291), .A2(easter_counter[2]), .B1(n290), .B2(
-        easter_counter[2]), .O(N38) );
+        easter_counter[2]), .O(N37) );
 endmodule
 
