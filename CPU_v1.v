@@ -214,12 +214,12 @@ always@(*)begin
 end
 
 always@(*)begin
-    case(vout_addr)
+        case(vout_addr)
         2'b00:value_o   = (DataOrReg)? reg_o[7:0]   : data_mem_o[7:0];
         2'b01:value_o   = (DataOrReg)? reg_o[15:8]  : data_mem_o[15:8];
         2'b10:value_o   = (DataOrReg)? reg_o[23:16] : data_mem_o[23:16];
         2'b11:value_o   = (DataOrReg)? reg_o[31:24] : data_mem_o[31:24];
-    endcase
+        endcase
 end
 
 MUX32 pcSelect(
