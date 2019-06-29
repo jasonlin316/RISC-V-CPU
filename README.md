@@ -1,7 +1,7 @@
 RISC-V CPU
 ==================
 This is a 32-bit 5-stage pipelined RISC-V CPU that supports basic instructions and some vector arithmetic.  
-Gate level synthesised and APR are done as well.
+In order to tape out, gate level synthesis and APR are done as well.
 
 ## Usage
 To run this work, you will need a verilog compiler such as ncverilog.  
