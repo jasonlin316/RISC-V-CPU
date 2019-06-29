@@ -1,0 +1,26 @@
+#
+# 1. Modify this file to fit your own environment.
+# 2. Copy this file synopsys_dc.setup to .synopsys_dc.setup
+#    and put this file in tool's invoking directory or your home directory.
+#	
+
+
+set company {NTUGIEE}
+set designer {Student}
+
+set search_path "/home/raid7_2/course/cvsd/CBDK_IC_Contest/CIC/SynopsysDC/db/ $search_path"
+set search_path "../Memory/sram_8192x8_t13/LM/ $search_path"
+
+set link_library [list "dw_foundation.sldb" "typical.db" "slow.db" "fast.db" "sram_8192x8_t13_slow_syn.db" "sram_8192x8_t13_fast_syn.db"]
+set target_library [list "typical.db" "slow.db" "fast.db" "sram_8192x8_t13_slow_syn.db" "sram_8192x8_t13_fast_syn.db"]
+set symbol_library [list "generic.sdb"]
+set synthetic_library [list "dw_foundation.sldb"]
+set default_schematic_options {-size infinite}
+
+set hdlin_translate_off_skip_text "TRUE"
+set edifout_netlist_only "TRUE"
+set verilogout_no_tri true	
+set plot_command {lpr -Plw}
+set hdlin_auto_save_templates "TRUE"
+set compile_fix_multiple_port_nets "TRUE"
+
