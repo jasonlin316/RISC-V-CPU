@@ -1,17 +1,19 @@
-RISC-V CPU
+RISC-V CPU Chip (Tape-Out with UMC 180nm Technology)
 ==================
 This is a 32-bit 5-stage pipelined RISC-V CPU that supports basic instructions and some vector arithmetic.  
-In order to tape out, gate level synthesis and APR are done as well.
+In order to tape out, gate level synthesis and APR are done as well.  
+The simulation was done by ncverilog and synthesised by desgin compiler.
 
 ## Usage
 To run this work, you will need a verilog compiler such as ncverilog.  
 _$ ncverilog testbench.v CPU.v_ to run RTL simulation.  
 _$ ncverilog testbench.v WIN.v +define+SDF_ to run gate level simulation.  
 _$ ncverilog testbench.v core_APR.v +define+SDF_ to run APR simulation.  
-Note that you need to decompress the file in APR_files.zip and put those file in the src folder to run APR simulation.
+Note that you need to decompress the file in APR_files.zip and put those file in the src folder to run APR simulation.  
+ 
 
 To run your own RISC-V program, change line 57 in the testbench to the file you want.  
-The first line of the file must be 11111110 and the last line must be 11111111 in order to indicate the CPU to start and end.  
+The first line of the file must be 11111110 and the last line must be 11111111 in order to indicate the CPU to start and end respectively.  
 Your instructions has to be breakdown into 8-bits.  
 >For example:  
 >11111110_00000000_00000000_00000010_00010011 //addi $a0, $r0, 0  
@@ -65,7 +67,7 @@ in the instruction file
 
 ## Design Specification
 
-|      |     |
+|  Spec    |   Value  |
 |-----------|---|
 | Frequency | 100MHz  |
 | Chip size |  1456.84*1462.96 µm^2  |
