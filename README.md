@@ -1,4 +1,4 @@
-RISC-V CPU Chip (Tape-Out with UMC 180nm Technology)
+RISC-V CPU (Tape-Out with U18 Technology)
 ==================
 This is a 32-bit 5-stage pipelined RISC-V CPU that supports basic instructions and some vector arithmetic.  
 In order to tape out, gate level synthesis and APR are done as well.  
