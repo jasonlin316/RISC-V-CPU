@@ -5,9 +5,9 @@ Gate level synthesised and APR are done as well.
 
 ## Usage
 To run this work, you will need a verilog compiler such as ncverilog.  
-_$ ncverilog testbench.v CPU.v_ to run RTL simulation.
-_$ ncverilog testbench.v WIN.v +define+SDF_ to run gate level simulation.
-_$ ncverilog testbench.v core_APR.v +define+SDF_ to run APR simulation.
+_$ ncverilog testbench.v CPU.v_ to run RTL simulation.  
+_$ ncverilog testbench.v WIN.v +define+SDF_ to run gate level simulation.  
+_$ ncverilog testbench.v core_APR.v +define+SDF_ to run APR simulation.  
 Note that you need to first decompress the file in APR_files.zip and put those file in the src folder.
 
 To run your own RISC-V program, change line 57 in the testbench to the file you want.  
