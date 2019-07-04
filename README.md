@@ -60,6 +60,11 @@ in the instruction file
 * Output Ports
 	* value_o : Output value.
   	* is_positive : This is for handling overflow cases when doing vector sum.  When two 7-bit value are added together, it produces a 8-bit value and the value will be interpret as a negative value. When is_positive = 1, the 8-bit output should be interpret as a 8-bit positive value instead of a negative value.
+## Schematic
+![CPU](https://github.com/jasonlin316/RISC-V-CPU/blob/master/pic/CPU.png)
+![Pipelined]( https://github.com/jasonlin316/RISC-V-CPU/blob/master/pic/IFID.png)
+![Forward](https://github.com/jasonlin316/RISC-V-CPU/blob/master/pic/EX.png)
+![Vector](https://github.com/jasonlin316/RISC-V-CPU/blob/master/pic/VALU.png)
 
 ## Layout
 ![APR result](https://github.com/jasonlin316/RISC-V-CPU/blob/master/pic/APR.png)
