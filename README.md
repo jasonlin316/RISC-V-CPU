@@ -46,7 +46,7 @@ in the instruction file
 ![Instruction Desgin](https://github.com/jasonlin316/RISC-V-CPU/blob/master/pic/InstructionType.png)
   
  ## Hazard Detection Supported
- ![Hazard Detection](https://github.com/jasonlin316/RISC-V-CPU/blob/master/pic/HazardDetect.png)
+ ![Hazard Detection](https://github.com/jasonlin316/RISC-V-CPU/blob/master/pic/hazard.png)
  Our work supports data forwarding to prevent data hazard. Forwarding works in most case but branch jump, to deal with it our design supportd hazard detection as well.
   
   ## I/O Port
