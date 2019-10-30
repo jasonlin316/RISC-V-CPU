@@ -24,7 +24,7 @@ Your instructions has to be breakdown into 8-bits.
 00010011  
 in the instruction file
 ## Block Diagram
-![Block Diagram](https://github.com/jasonlin316/RISC-V-CPU/blob/master/pic/block_diagram.png)
+![Block Diagram](https://github.com/jasonlin316/RISC-V-CPU/blob/master/pic/block_diagram_black.png)
 
 ## Supported Instructions
 
@@ -67,6 +67,7 @@ in the instruction file
 ![Vector](https://github.com/jasonlin316/RISC-V-CPU/blob/master/pic/VALU.png)
 
 ## Layout
+![Chip] (https://github.com/jasonlin316/RISC-V-CPU/blob/master/pic/ic_photo.png)
 ![APR result](https://github.com/jasonlin316/RISC-V-CPU/blob/master/pic/APR.png)
 ![Virtuoso](https://github.com/jasonlin316/RISC-V-CPU/blob/master/pic/layout.png)
 
@@ -83,7 +84,7 @@ in the instruction file
 ## Background
 This is originally a course project of Integrated Circuits Design Laboratory at National Taiwan University,  
 lectured by Prof. [Tzi-Dar Chiueh](http://www.ee.ntu.edu.tw/profile?id=33)  
-This work will be taped-out on summer, 2019 at TSRI (Taiwan Semiconductor Research Institute.)
+This work has been taped-out at TSRI (Taiwan Semiconductor Research Institute.) and received on Oct.30 2019.
 
 ## Reference 
 David A. Patterson and John L. Hennessy. 2017. Computer Organization and Design RISC-V Edition: The Hardware Software Interface (1st ed.). Morgan Kaufmann Publishers Inc., San Francisco, CA, USA.
