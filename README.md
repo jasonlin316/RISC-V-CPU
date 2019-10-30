@@ -24,7 +24,7 @@ Your instructions has to be breakdown into 8-bits.
 00010011  
 in the instruction file
 ## Block Diagram
-![Block Diagram](https://github.com/jasonlin316/RISC-V-CPU/blob/master/pic/block_diagram_black.png)
+![Block Diagram](https://github.com/jasonlin316/RISC-V-CPU/blob/master/pic/block_diagram.png)
 
 ## Supported Instructions
 
@@ -67,7 +67,7 @@ in the instruction file
 ![Vector](https://github.com/jasonlin316/RISC-V-CPU/blob/master/pic/VALU.png)
 
 ## Layout
-![Chip] (https://github.com/jasonlin316/RISC-V-CPU/blob/master/pic/ic_photo.png)
+![Chip](https://github.com/jasonlin316/RISC-V-CPU/blob/master/pic/ic_photo.png)
 ![APR result](https://github.com/jasonlin316/RISC-V-CPU/blob/master/pic/APR.png)
 ![Virtuoso](https://github.com/jasonlin316/RISC-V-CPU/blob/master/pic/layout.png)
 
