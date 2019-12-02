@@ -2,7 +2,8 @@ RISC-V CPU (Tape-Out with U18 Technology)
 ==================
 This is a 32-bit 5-stage pipelined RISC-V CPU that supports basic instructions and some vector arithmetic.  
 In order to tape out, gate level synthesis and APR are done as well.  
-The simulation was done by ncverilog and synthesised by desgin compiler.
+The simulation was done by NC-verilog and synthesised by Desgin Compiler.
+This chip has been tested on Dec.2 2019, and all functions work correctly.
 
 ## Usage
 To run this work, you will need a verilog compiler such as ncverilog.  
